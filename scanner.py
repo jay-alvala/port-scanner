@@ -12,7 +12,7 @@ def scan_port(target, port):
             # Try to identify the common service running on the open port
             service = socket.getservbyport(port)
         except:
-            service = 'Unknown'
+            service = 'unknown'
         print(f'Port {port} is open - {service}')
     scanner.close()
 target = input('Enter Target: ')
@@ -29,3 +29,4 @@ print("Scanning completed.")
 end_time = datetime.now()
 total_time = end_time - start_time
 print(f'Total scan time = {total_time}')
+print('-' * 50)
